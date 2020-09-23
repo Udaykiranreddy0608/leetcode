@@ -1,6 +1,6 @@
-package com.newton.code;
+package com.newton.code.linkedlist;
 
-public class LinkedList {
+public class ReverseLinkedList {
   static ListNode head;
 
   static class ListNode {
@@ -16,17 +16,17 @@ public class LinkedList {
 
   public static void main(String[] args) {
 
-    LinkedList linkedList = new LinkedList();
-    linkedList.head = new ListNode(12);
-    linkedList.head.next = new ListNode(21);
-    linkedList.head.next.next = new ListNode(43);
-    linkedList.head.next.next.next = new ListNode(64);
+    ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
+    reverseLinkedList.head = new ListNode(12);
+    reverseLinkedList.head.next = new ListNode(21);
+    reverseLinkedList.head.next.next = new ListNode(43);
+    reverseLinkedList.head.next.next.next = new ListNode(64);
     System.out.println("Given linked list .....");
-    linkedList.print(head);
+    reverseLinkedList.print(head);
     System.out.println("\nReverse a linked list");
-    head = linkedList.reverseLinkedList(head);
+    head = reverseLinkedList.reverseLinkedList(head);
     System.out.println("\nPrint reversed linked list");
-    linkedList.print(head);
+    reverseLinkedList.print(head);
 
   }
 
