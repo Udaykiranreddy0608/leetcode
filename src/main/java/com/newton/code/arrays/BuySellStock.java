@@ -1,4 +1,4 @@
-package com.newton.code;
+package com.newton.code.arrays;
 
 public class BuySellStock {
   public static void main(String[] args) {
