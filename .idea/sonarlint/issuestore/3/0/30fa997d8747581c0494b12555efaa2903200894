@@ -1,0 +1,11 @@
+
+<
+java:S11689"&Return an empty array instead of null.(¥¹ï
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(åìôšþÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(›Äù¯
+q
+java:S14885"[Immediately return this expression instead of assigning it to the temporary variable "res".(Âã··
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ñûª©ýÿÿÿÿ
+Y
+java:S2583"CChange this condition so that it does not always evaluate to "true"(è÷Ù™
