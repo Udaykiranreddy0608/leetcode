@@ -3,17 +3,6 @@ package com.newton.code.linkedlist;
 public class ReverseLinkedList {
   static ListNode head;
 
-  static class ListNode {
-    int data;
-    ListNode next;
-
-    ListNode(int data) {
-      this.data = data;
-      next = null;
-    }
-
-  }
-
   public static void main(String[] args) {
 
     ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
@@ -27,7 +16,6 @@ public class ReverseLinkedList {
     head = reverseLinkedList.reverseLinkedList(head);
     System.out.println("\nPrint reversed linked list");
     reverseLinkedList.print(head);
-
   }
 
   public ListNode reverseLinkedList(ListNode listNode) {
@@ -53,4 +41,13 @@ public class ReverseLinkedList {
     }
   }
 
+  static class ListNode {
+    int data;
+    ListNode next;
+
+    ListNode(int data) {
+      this.data = data;
+      next = null;
+    }
+  }
 }
