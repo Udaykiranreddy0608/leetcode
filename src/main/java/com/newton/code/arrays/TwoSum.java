@@ -14,9 +14,9 @@ import java.util.HashMap;
 
 public class TwoSum {
   public static void main(String[] args) {
-    int[] nums = new int[] {10, 2, 3, 4, 5, 6, 7};
+    int[] nums = new int[] {1, 2, 3, 4, 5, 60, 70};
     int[] res = twoSum(nums, 17);
-    if (res != null) {
+    if (res != null && res.length == 2 && (res[0] != 0 && res[1] != 0)) {
       System.out.println("[" + res[0] + "," + res[1] + "]");
     } else {
       System.out.println("Couldn't find a match");
@@ -27,7 +27,7 @@ public class TwoSum {
     int[] res = new int[2];
     HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
 
-    for (int x = 0; x <= nums.length; x++) {
+    for (int x = 0; x < nums.length; x++) {
       int isExist = target - nums[x];
       if (hashMap.containsKey(isExist)) {
         res[0] = hashMap.get(isExist);
