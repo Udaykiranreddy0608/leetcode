@@ -1,53 +1,53 @@
 package com.newton.code.linkedlist;
 
 public class ReverseLinkedList {
-  static ListNode head;
+    static ListNode head;
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-    reverseLinkedList.head = new ListNode(12);
-    reverseLinkedList.head.next = new ListNode(21);
-    reverseLinkedList.head.next.next = new ListNode(43);
-    reverseLinkedList.head.next.next.next = new ListNode(64);
-    System.out.println("Given linked list .....");
-    reverseLinkedList.print(head);
-    System.out.println("\nReverse a linked list");
-    head = reverseLinkedList.reverseLinkedList(head);
-    System.out.println("\nPrint reversed linked list");
-    reverseLinkedList.print(head);
-  }
-
-  public ListNode reverseLinkedList(ListNode listNode) {
-    ListNode prev = null;
-    ListNode current = listNode;
-    ListNode next = null;
-
-    while (current != null) {
-      next = current.next;
-      current.next = prev;
-      prev = current;
-      current = next;
+        ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
+        reverseLinkedList.head = new ListNode(12);
+        reverseLinkedList.head.next = new ListNode(21);
+        reverseLinkedList.head.next.next = new ListNode(43);
+        reverseLinkedList.head.next.next.next = new ListNode(64);
+        System.out.println("Given linked list .....");
+        reverseLinkedList.print(head);
+        System.out.println("\nReverse a linked list");
+        head = reverseLinkedList.reverseLinkedList(head);
+        System.out.println("\nPrint reversed linked list");
+        reverseLinkedList.print(head);
     }
 
-    listNode = prev;
-    return listNode;
-  }
+    public ListNode reverseLinkedList(ListNode listNode) {
+        ListNode prev = null;
+        ListNode current = listNode;
+        ListNode next = null;
 
-  public void print(ListNode listNode) {
-    while (listNode != null) {
-      System.out.print(listNode.data + " ");
-      listNode = listNode.next;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        listNode = prev;
+        return listNode;
     }
-  }
 
-  static class ListNode {
-    int data;
-    ListNode next;
-
-    ListNode(int data) {
-      this.data = data;
-      next = null;
+    public void print(ListNode listNode) {
+        while (listNode != null) {
+            System.out.print(listNode.data + " ");
+            listNode = listNode.next;
+        }
     }
-  }
+
+    static class ListNode {
+        int data;
+        ListNode next;
+
+        ListNode(int data) {
+            this.data = data;
+            next = null;
+        }
+    }
 }
