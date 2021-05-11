@@ -1,4 +1,4 @@
-package com.newton.code.strings;
+package com.newton.code.bits;
 
 import java.io.UnsupportedEncodingException;
 

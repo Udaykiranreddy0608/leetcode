@@ -2,7 +2,7 @@ package com.newton.code.arrays;
 
 public class BuySellStock {
     public static void main(String[] args) {
-        System.out.println("Max profit is : " + maxProfit(new int[]{7, 1, 6, 4, 5, 9}));
+        System.out.println("Max profit is : " + maxProfit2(new int[]{7, 1, 5, 3, 6, 4}));
     }
 
     public static int maxProfit(int[] prices) {
@@ -17,4 +17,19 @@ public class BuySellStock {
         }
         return maxProfit;
     }
+
+    public static int maxProfit2(int[] prices) {
+        int maxProfit = 0;
+        int minVal = Integer.MAX_VALUE;
+        int len  = prices.length;
+        for (int i = 0; i < len; i++) {
+            maxProfit = Math.max(maxProfit, prices[i] - minVal);
+            if (prices[i] < minVal) {
+                minVal = prices[i];
+            }
+        }
+        return maxProfit;
+    }
+
+
 }
