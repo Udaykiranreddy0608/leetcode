@@ -11,7 +11,7 @@ public class FindMaxAverage {
         double sol = 0;
         double max = Integer.MIN_VALUE;
         for (int i = 0; i < ints.length; i++) {
-            if (i < k) {
+            if (i < k ) {
                 sol += ints[i];
             } else {
                 max = Math.max(max, sol / k);
