@@ -5,7 +5,7 @@ import java.util.*;
 public class ReduceArraySizeToHalf {
 
     public static void main(String[] args) {
-        int[] arr = {3,3,3,3,5,5,5,2,2,7};
+        int[] arr = {3, 3, 3, 3, 5, 5, 5, 2, 2, 7};
         minSetSize2(arr);
     }
 
@@ -15,39 +15,29 @@ public class ReduceArraySizeToHalf {
         for (int i : arr) {
             integerHashMap.put(i, integerHashMap.getOrDefault(i, 0) + 1);
         }
-        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>(){
+        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
             public int compare(Integer o1, Integer o2) {
                 return integerHashMap.get(o2) - integerHashMap.get(o1);
             }
         });
-
-
-        for (Integer integer : integerHashMap.keySet()) {
-
-
-
-
-
-
-
-            pq.add(integer);
-        }
-
-        int n = arr.length / 2;
+        int actualLength = arr.length;
+        int reqLength = arr.length / 2;
         int currSize = 0;
-        int count = 0;
-        while (currSize < n) {
-            currSize += integerHashMap.get(pq.poll());
-            count++;
-        }
 
+        for (Integer key : integerHashMap.keySet()) {
+            pq.add(key);
+            currSize = currSize + integerHashMap.get(key);
+            if (currSize <= reqLength) {
+
+            }
+
+
+        }
         for (Integer integer : pq) {
-            System.out.println(""+integer);
+            System.out.println("" + integer);
         }
-
-        return count;
+        return 0;
     }
-
 
 
     private static int minSetSize(int[] arr) {
@@ -70,7 +60,7 @@ public class ReduceArraySizeToHalf {
                 break;
             }
         }
-      return  result.size();
+        return result.size();
     }
 
     private static int getMaxKeyFromHashMap(HashMap<Integer, Integer> integerHashMap) {
