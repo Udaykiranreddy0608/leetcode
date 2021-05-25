@@ -1,9 +1,67 @@
 package com.newton.code.arrays;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+
 public class RankTeamsByVotes {
     public static void main(String[] args) {
         String[] votes = {"ABC", "ACB", "ABC", "ACB", "ACB"};
-        rankTeams(votes);
+        rankTeams2(votes);
+    }
+
+
+    private static  String rankTeams2(String[] votes){
+        int numOfPlayers = votes[0].length();
+
+        Map<Character, Integer[]> palyerRankCountMap = new HashMap<>();
+
+        for(String vote:votes){
+            char chars[] = vote.toCharArray();
+            for(int i = 0 ; i < numOfPlayers ; i++){
+                if(palyerRankCountMap.containsKey(chars[i])){
+                    palyerRankCountMap.get(chars[i])[i]++;
+                }else{
+                    Integer arrInt[] = new Integer[numOfPlayers];
+                    for(int j = 0 ; j < numOfPlayers;j++){
+                        arrInt[j] = 0;
+                    }
+                    arrInt[i]++;
+                    palyerRankCountMap.put(chars[i],arrInt);
+                }
+            }
+
+        }
+
+        char ans[] = votes[0].toCharArray();
+        Character[] tmpArr = new Character[numOfPlayers];
+        for(int i = 0; i < numOfPlayers ; i++){
+            tmpArr[i] = ans[i];
+        }
+
+        Arrays.sort(tmpArr,new Comparator<Character>(){
+            public int compare(Character a, Character b){
+                Integer pa[] = palyerRankCountMap.get(a);
+                Integer pb[] = palyerRankCountMap.get(b);
+
+                for(int i = 0; i < numOfPlayers; i++){
+                    if(pa[i] > pb[i]){
+                        return -1;
+                    } else if(pa[i] < pb[i]){
+                        return 1;
+                    }
+                }
+
+                return  a > b ? 1 : a < b ? -1: 0;
+            }
+        });
+
+
+        for(int i = 0; i < numOfPlayers ; i++){
+            ans[i] = tmpArr[i];
+        }
+        return new String(ans);
     }
 
     private static String rankTeams(String[] votes) {
