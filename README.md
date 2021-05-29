@@ -88,3 +88,19 @@
 * Merge K Sorted Lists
 * Top K Frequent Elements
 * Find Median from Data Stream
+
+
+## Schedule 
+
+* Arrays                - 14/30 Days 
+    * Sliding window
+    * BFS 
+    * DFS 
+    * Greedy 
+    * DP (Recursion + Memorization)
+    * Back tracking
+* Strings               - 10
+    * Trie
+* Linked list           - 10
+* Trees                 - 10
+* Bit Manipulation      - 5
