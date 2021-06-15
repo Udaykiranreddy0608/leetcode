@@ -1,8 +1,15 @@
 package com.newton.code.arrays;
 
+import java.util.TreeSet;
+
 public class Test {
     public static void main(String[] args) {
-        System.out.println("11 - 9 : "+(Math.abs(11-9)));
-        System.out.println("9-11 : "+(Math.abs(9-11)));
+        TreeSet<Integer> integers = new TreeSet<>();
+        integers.add(10);
+        integers.add(20);
+        integers.add(30);
+        integers.add(40);
+        System.out.println(integers.floor(41));
+        System.out.println(integers.ceiling(40));
     }
 }
