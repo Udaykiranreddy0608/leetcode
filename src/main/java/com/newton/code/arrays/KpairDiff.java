@@ -36,7 +36,7 @@ public class KpairDiff {
                         unique++;
                     }
                 }
-                if (integerListHashMap.containsKey(y) && k!=0 ) {
+                if (integerListHashMap.containsKey(y) && k != 0) {
                     Set<Integer> integers = integerListHashMap.get(y);
                     int finalI = i;
                     if (integers.stream().filter(p -> p > finalI && !processed.contains(nums[p])).collect(Collectors.toSet()).size() > 0) {

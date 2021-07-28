@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MutantJava {
     public static void main(String[] args) {
-        int[] nums = {60864,25176,27249,21296,20204};
+        int[] nums = {60864, 25176, 27249, 21296, 20204};
         int target = 10;
         findMutant(nums, target);
     }

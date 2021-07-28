@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 
 public class MaxProductOfString {
     public static void main(String[] args) throws UnsupportedEncodingException {
-        String[] strs = {"ab", "ab","abc","def"};
+        String[] strs = {"ab", "ab", "abc", "def"};
         System.out.println(maxProductOfString(strs));
     }
 
@@ -20,9 +20,9 @@ public class MaxProductOfString {
 
         int max = 0;
         for (int i = 0; i < vals.length; i++) {
-            for(int j = i +1;j<vals.length;j++ ){
-                if((vals[i] & vals[j]) == 0){
-                    max = Math.max(max,words[i].length()  * words[j].length());
+            for (int j = i + 1; j < vals.length; j++) {
+                if ((vals[i] & vals[j]) == 0) {
+                    max = Math.max(max, words[i].length() * words[j].length());
                 }
             }
         }

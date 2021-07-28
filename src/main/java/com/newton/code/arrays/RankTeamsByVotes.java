@@ -12,23 +12,23 @@ public class RankTeamsByVotes {
     }
 
 
-    private static  String rankTeams2(String[] votes){
+    private static String rankTeams2(String[] votes) {
         int numOfPlayers = votes[0].length();
 
         Map<Character, Integer[]> palyerRankCountMap = new HashMap<>();
 
-        for(String vote:votes){
+        for (String vote : votes) {
             char chars[] = vote.toCharArray();
-            for(int i = 0 ; i < numOfPlayers ; i++){
-                if(palyerRankCountMap.containsKey(chars[i])){
+            for (int i = 0; i < numOfPlayers; i++) {
+                if (palyerRankCountMap.containsKey(chars[i])) {
                     palyerRankCountMap.get(chars[i])[i]++;
-                }else{
+                } else {
                     Integer arrInt[] = new Integer[numOfPlayers];
-                    for(int j = 0 ; j < numOfPlayers;j++){
+                    for (int j = 0; j < numOfPlayers; j++) {
                         arrInt[j] = 0;
                     }
                     arrInt[i]++;
-                    palyerRankCountMap.put(chars[i],arrInt);
+                    palyerRankCountMap.put(chars[i], arrInt);
                 }
             }
 
@@ -36,29 +36,29 @@ public class RankTeamsByVotes {
 
         char ans[] = votes[0].toCharArray();
         Character[] tmpArr = new Character[numOfPlayers];
-        for(int i = 0; i < numOfPlayers ; i++){
+        for (int i = 0; i < numOfPlayers; i++) {
             tmpArr[i] = ans[i];
         }
 
-        Arrays.sort(tmpArr,new Comparator<Character>(){
-            public int compare(Character a, Character b){
+        Arrays.sort(tmpArr, new Comparator<Character>() {
+            public int compare(Character a, Character b) {
                 Integer pa[] = palyerRankCountMap.get(a);
                 Integer pb[] = palyerRankCountMap.get(b);
 
-                for(int i = 0; i < numOfPlayers; i++){
-                    if(pa[i] > pb[i]){
+                for (int i = 0; i < numOfPlayers; i++) {
+                    if (pa[i] > pb[i]) {
                         return -1;
-                    } else if(pa[i] < pb[i]){
+                    } else if (pa[i] < pb[i]) {
                         return 1;
                     }
                 }
 
-                return  a > b ? 1 : a < b ? -1: 0;
+                return a > b ? 1 : a < b ? -1 : 0;
             }
         });
 
 
-        for(int i = 0; i < numOfPlayers ; i++){
+        for (int i = 0; i < numOfPlayers; i++) {
             ans[i] = tmpArr[i];
         }
         return new String(ans);

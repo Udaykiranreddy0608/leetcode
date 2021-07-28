@@ -7,7 +7,7 @@ public class MinimumMovesToArray {
     }
 
     private static int minMOvesTOArray(int[] nums) {
-        int moves=0;
+        int moves = 0;
 
         return moves;
     }

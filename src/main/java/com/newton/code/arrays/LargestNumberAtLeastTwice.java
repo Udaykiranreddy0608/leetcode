@@ -2,7 +2,7 @@ package com.newton.code.arrays;
 
 public class LargestNumberAtLeastTwice {
     public static void main(String[] args) {
-        int[] ints = {3,6,1,0};
+        int[] ints = {3, 6, 1, 0};
         System.out.println(largestTwice(ints));
     }
 

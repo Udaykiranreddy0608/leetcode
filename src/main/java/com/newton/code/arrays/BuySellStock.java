@@ -21,7 +21,7 @@ public class BuySellStock {
     public static int maxProfit2(int[] prices) {
         int maxProfit = 0;
         int minVal = Integer.MAX_VALUE;
-        int len  = prices.length;
+        int len = prices.length;
         for (int i = 0; i < len; i++) {
             maxProfit = Math.max(maxProfit, prices[i] - minVal);
             if (prices[i] < minVal) {
