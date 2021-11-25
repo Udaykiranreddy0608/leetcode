@@ -2,9 +2,32 @@ package com.newton.code.arrays;
 
 public class RotateArray {
     public static void main(String[] args) {
-        int[] nums = {-1,3,4,5,6,7};
-        int k = 2;
-        rotate(nums, k);
+        System.out.println(2 % 9);
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8};
+        int k = 4;
+        rotate2(nums, k);
+    }
+
+
+    public static void rotate2(int[] nums, int k) {
+
+        if (nums.length <= k) k = k - nums.length;
+        int j = nums.length - k;
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println("i : " + i + "\t j :" + j);
+            int temp = nums[j];
+            nums[j] = nums[i];
+            nums[i] = temp;
+            if (j == nums.length - 1) {
+                j = nums.length - k;
+            } else {
+                j++;
+            }
+        }
+
+        for (int num : nums) {
+            System.out.printf(num + "\t");
+        }
     }
 
     public static void rotate(int[] nums, int k) {
