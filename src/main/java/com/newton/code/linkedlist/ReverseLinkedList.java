@@ -29,9 +29,7 @@ public class ReverseLinkedList {
             prev = current;
             current = next;
         }
-
-        listNode = prev;
-        return listNode;
+        return prev;
     }
 
     public void print(ListNode listNode) {
