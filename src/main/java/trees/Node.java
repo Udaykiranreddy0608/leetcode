@@ -1,4 +1,4 @@
-package com.newton.code;
+package trees;
 
 public class Node {
 
