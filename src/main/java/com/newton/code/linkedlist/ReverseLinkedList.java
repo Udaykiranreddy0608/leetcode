@@ -38,14 +38,4 @@ public class ReverseLinkedList {
             listNode = listNode.next;
         }
     }
-
-    static class ListNode {
-        int data;
-        ListNode next;
-
-        ListNode(int data) {
-            this.data = data;
-            next = null;
-        }
-    }
 }
