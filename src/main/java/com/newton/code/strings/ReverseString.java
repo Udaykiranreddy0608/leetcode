@@ -29,7 +29,7 @@ public class ReverseString {
             char[] bytes = s2.toCharArray();
             int j = bytes.length - 1;
 
-            for (int i = 0; i < bytes.length/2; i++) {
+            for (int i = 0; i < bytes.length / 2; i++) {
                 if (i <= j) {
                     char temp = bytes[i];
                     bytes[i] = bytes[j];
