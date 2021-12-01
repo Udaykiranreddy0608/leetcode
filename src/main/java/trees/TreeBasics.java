@@ -11,7 +11,7 @@ public class TreeBasics {
         Node node = new Node(10);
         node.left = new Node(5);
         node.right = new Node(15);
-        node.right.left =new Node(11);
+        node.right.left = new Node(11);
         node.right.right = new Node(13);
         node.left.right = new Node(8);
         node.left.left = new Node(4);
