@@ -28,7 +28,7 @@ public class IntersectionTwoArrays {
             if (integers.containsKey(i)) {
                 result.add(i);
                 integers.put(i, integers.get(i) - 1);
-                if(integers.get(i)<=0){
+                if (integers.get(i) <= 0) {
                     integers.remove(i);
                 }
             }
