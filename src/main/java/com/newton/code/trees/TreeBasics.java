@@ -1,4 +1,4 @@
-package trees;
+package com.newton.code.trees;
 
 public class TreeBasics {
 
