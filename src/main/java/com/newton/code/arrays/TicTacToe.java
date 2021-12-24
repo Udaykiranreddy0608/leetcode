@@ -2,8 +2,14 @@ package com.newton.code.arrays;
 
 public class TicTacToe {
     public static void main(String[] args) {
+        /**
+         * 1
+         *      1
+         * 2    2    1
+         */
         int[][] moves = {{0, 0}, {2, 0}, {1, 1}, {2, 1}, {2, 2}};
-        playGame(moves);
+        System.out.printf(playGame(moves));
+
     }
 
     private static String playGame(int[][] moves) {
