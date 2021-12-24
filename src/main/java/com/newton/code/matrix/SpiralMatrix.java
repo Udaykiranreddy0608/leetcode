@@ -1,4 +1,4 @@
-package com.newton.code.arrays;
+package com.newton.code.matrix;
 
 import java.util.ArrayList;
 import java.util.List;

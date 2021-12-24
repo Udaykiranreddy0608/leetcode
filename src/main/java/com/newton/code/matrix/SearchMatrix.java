@@ -1,4 +1,4 @@
-package com.newton.code.arrays;
+package com.newton.code.matrix;
 
 public class SearchMatrix {
 
