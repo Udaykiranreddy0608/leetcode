@@ -10,7 +10,6 @@ public class UniqueCharString {
     }
 
     public static int firstUniqChar(String s) {
-
         HashMap<Character, Integer> stringHashMap = new HashMap<Character, Integer>();
 
         int length = s.length();
