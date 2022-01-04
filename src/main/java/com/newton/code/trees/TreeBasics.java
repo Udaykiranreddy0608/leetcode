@@ -29,7 +29,7 @@ public class TreeBasics {
     }
 
     /**
-     * left node right
+     * in-order : left node right
      *
      * @param node
      */
@@ -44,7 +44,7 @@ public class TreeBasics {
     }
 
     /**
-     * Node left right
+     * pre-order : Node left right
      *
      * @param node
      */
@@ -59,7 +59,7 @@ public class TreeBasics {
     }
 
     /**
-     * left right node
+     * post-order : left right node
      *
      * @param node
      */
