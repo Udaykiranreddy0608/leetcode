@@ -9,25 +9,22 @@ public class TownJudge {
 
     public static int findJudge(int n, int[][] trust) {
 
-        int[] trusted = new int[n - 1];
-        int[] trusting = new int[n - 1];
+        int[] trusted = new int[n + 1];
+        int[] trusting = new int[n + 1];
 
-        for (int i = 0; i < n; i++) {
-            int p1 = trust[i][0];
-            int p2 = trust[i][1];
-            trusted[p1]++;
-            trusting[p2]++;
-        }
+            for (int[] ints : trust) {
+                int p1 = ints[0];
+                int p2 = ints[1];
+                trusted[p2]++;
+                trusting[p1]++;
+            }
 
-        for (int i = 0; i < n; i++) {
+        for (int i = n;  n >=0; i--) {
 
             if (trusted[i] == n - 1 && trusting[i] == 0) {
                 return i;
             }
-
         }
-
-
         return -1;
     }
 }
