@@ -4,10 +4,10 @@ public class Node {
 
     Node left;
     Node right;
-    int data;
+    int val;
 
     public Node(int data) {
-        this.data = data;
+        this.val = data;
         this.left = null;
         this.right = null;
     }

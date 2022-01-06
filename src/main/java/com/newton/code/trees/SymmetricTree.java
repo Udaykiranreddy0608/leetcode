@@ -24,7 +24,7 @@ public class SymmetricTree {
         if (p == null && q == null) return true;
         if (p == null || q == null) return false;
 
-        if (p.data != q.data) return false;
+        if (p.val != q.val) return false;
         return compare(p.left, q.right) && compare(p.right, q.left);
     }
 

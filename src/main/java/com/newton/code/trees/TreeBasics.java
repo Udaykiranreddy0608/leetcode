@@ -37,7 +37,7 @@ public class TreeBasics {
         if (node.left != null) {
             printNodeInOrder(node.left);
         }
-        System.out.printf("\t" + node.data);
+        System.out.printf("\t" + node.val);
         if (node.right != null) {
             printNodeInOrder(node.right);
         }
@@ -49,7 +49,7 @@ public class TreeBasics {
      * @param node
      */
     public static void printNodePreOrder(Node node) {
-        System.out.printf("\t" + node.data);
+        System.out.printf("\t" + node.val);
         if (node.left != null) {
             printNodePreOrder(node.left);
         }
@@ -70,7 +70,7 @@ public class TreeBasics {
         if (node.right != null) {
             printNodePostOrder(node.right);
         }
-        System.out.printf("\t" + node.data);
+        System.out.printf("\t" + node.val);
     }
 
 
