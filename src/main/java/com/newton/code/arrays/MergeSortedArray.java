@@ -11,26 +11,26 @@ public class MergeSortedArray {
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int len = m+n;
-        int j=n-1;
-        int i=m-1;
+        int a = m-1;
+        int b = n-1;
 
-            while(i>=0 && j >=0){
-                if(nums1[i] < nums2[j]){
-                    nums1[--len]=nums2[j];
-                    j--;
-                }else{
-                    nums1[--len]=nums1[i];
-                    nums1[i]=0;
-                    i--;
-                }
+        while( a>=0 && b >=0 ){
+            if(nums1[a] >=  nums2[b]){
+                nums1[--len] = nums1[a];
+                a--;
+            }else{
+                nums1[--len] = nums2[b];
+                b--;
             }
-            while(j>=0){
-                nums1[j]=nums2[j];
-                j--;
-            }
+        }
+
+        while (b>=0){
+            nums1[b]= nums2[b];
+            b--;
+        }
 
         for(int k=0;k<nums1.length;k++){
-            System.out.println(nums1[k]);
+            System.out.printf("\t" + nums1[k]);
         }
     }
 }
