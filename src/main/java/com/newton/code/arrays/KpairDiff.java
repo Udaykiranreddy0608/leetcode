@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class KpairDiff {
 
     public static void main(String[] args) {
-        int nums[] = {3, 3, 1, 4, 1, 3, 5};
+        int[] nums = {3, 3, 1, 4, 1, 3, 5};
         int k = 2;
         findPairs(nums, k);
     }

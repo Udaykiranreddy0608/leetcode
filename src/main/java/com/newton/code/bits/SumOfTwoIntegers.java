@@ -7,10 +7,7 @@ public class SumOfTwoIntegers {
     }
 
     public static boolean checkPos(int i, int shiftNum) {
-        if ((i & shiftNum) >= 1) {
-            return true;
-        }
-        return false;
+        return (i & shiftNum) >= 1;
     }
 
     private static void sumOfTwoIntegers(int num1, int num2) {

@@ -6,10 +6,10 @@ public class ReverseLinkedList {
     public static void main(String[] args) {
 
         ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-        reverseLinkedList.head = new ListNode(12);
-        reverseLinkedList.head.next = new ListNode(21);
-        reverseLinkedList.head.next.next = new ListNode(43);
-        reverseLinkedList.head.next.next.next = new ListNode(64);
+        head = new ListNode(12);
+        head.next = new ListNode(21);
+        head.next.next = new ListNode(43);
+        head.next.next.next = new ListNode(64);
         System.out.println("Given linked list .....");
         reverseLinkedList.print(head);
         System.out.println("\nReverse a linked list");

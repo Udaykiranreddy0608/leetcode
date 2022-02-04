@@ -20,8 +20,8 @@ public class SameNode {
         if (p == null && q == null) return true;
         if (p == null || q == null) return false;
 
-        if(p.val != q.val) return false;
+        if (p.val != q.val) return false;
 
-        return isSameNode(p.left,q.left) && isSameNode(p.right,q.right);
+        return isSameNode(p.left, q.left) && isSameNode(p.right, q.right);
     }
 }

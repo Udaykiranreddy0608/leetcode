@@ -39,7 +39,6 @@ public class StringCheckValidParentheses {
                     break;
             }
         }
-        if (sb.length() == 0) return true;
-        return false;
+        return sb.length() == 0;
     }
 }

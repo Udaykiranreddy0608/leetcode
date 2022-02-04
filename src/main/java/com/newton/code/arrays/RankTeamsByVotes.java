@@ -18,12 +18,12 @@ public class RankTeamsByVotes {
         Map<Character, Integer[]> palyerRankCountMap = new HashMap<>();
 
         for (String vote : votes) {
-            char chars[] = vote.toCharArray();
+            char[] chars = vote.toCharArray();
             for (int i = 0; i < numOfPlayers; i++) {
                 if (palyerRankCountMap.containsKey(chars[i])) {
                     palyerRankCountMap.get(chars[i])[i]++;
                 } else {
-                    Integer arrInt[] = new Integer[numOfPlayers];
+                    Integer[] arrInt = new Integer[numOfPlayers];
                     for (int j = 0; j < numOfPlayers; j++) {
                         arrInt[j] = 0;
                     }
@@ -34,7 +34,7 @@ public class RankTeamsByVotes {
 
         }
 
-        char ans[] = votes[0].toCharArray();
+        char[] ans = votes[0].toCharArray();
         Character[] tmpArr = new Character[numOfPlayers];
         for (int i = 0; i < numOfPlayers; i++) {
             tmpArr[i] = ans[i];
@@ -42,8 +42,8 @@ public class RankTeamsByVotes {
 
         Arrays.sort(tmpArr, new Comparator<Character>() {
             public int compare(Character a, Character b) {
-                Integer pa[] = palyerRankCountMap.get(a);
-                Integer pb[] = palyerRankCountMap.get(b);
+                Integer[] pa = palyerRankCountMap.get(a);
+                Integer[] pb = palyerRankCountMap.get(b);
 
                 for (int i = 0; i < numOfPlayers; i++) {
                     if (pa[i] > pb[i]) {
