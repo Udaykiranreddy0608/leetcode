@@ -34,8 +34,8 @@ public class RemoveDuplicates {
         for (int i = 1; i < nums.length; i++) {
 
             if (nums[i] != nums[ref]) {
-                ref++;
                 nums[ref] = nums[i];
+                ref++;
             }
         }
         return nums.length;

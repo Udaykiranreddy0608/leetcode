@@ -28,10 +28,6 @@ public class MergeSortedArray {
             nums1[b] = nums2[b];
             b--;
         }
-
-        for (int k = 0; k < nums1.length; k++) {
-            System.out.printf("\t" + nums1[k]);
-        }
     }
 }
 
