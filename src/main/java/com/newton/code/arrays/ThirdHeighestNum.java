@@ -2,7 +2,7 @@ package com.newton.code.arrays;
 
 public class ThirdHeighestNum {
   public static void main(String[] args) {
-    int[] arr = {-2147483648,-2147483648,-2147483648,-2147483648,1,1,1};
+    int[] arr = {-2147483648, -2147483648, -2147483648, -2147483648, 1, 1, 1};
     thirdMax(arr);
 
   }
@@ -13,15 +13,15 @@ public class ThirdHeighestNum {
     int count = nums.length;
     int minValue = 0;
     for (int i = 0; i < nums.length; i++) {
-      if (nums[i] == Integer.MIN_VALUE){
-        minValue ++;
+      if (nums[i] == Integer.MIN_VALUE) {
+        minValue++;
       }
       if (minValue > 1 && nums[i] == Integer.MIN_VALUE) {
-        count --;
+        count--;
         continue;
       }
       if ((nums[i] == max3 || nums[i] == max2 || nums[i] == max1) && nums[i] != Integer.MIN_VALUE) {
-        count --;
+        count--;
         continue;
       }
 
