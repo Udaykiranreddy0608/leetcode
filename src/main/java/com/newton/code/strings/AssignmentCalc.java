@@ -24,9 +24,9 @@ public class AssignmentCalc {
                         break;
                     case "+":
                         int item = stack.pop() + stack.pop();
-                        if(item > Math.pow(2,20)-1){
+                        if (item > Math.pow(2, 20) - 1) {
                             stack.push(-1);
-                        }else{
+                        } else {
                             stack.push(item);
                         }
                         break;

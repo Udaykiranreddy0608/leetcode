@@ -15,14 +15,14 @@ public class Solution {
 
     public boolean solution(int[] A, int[] B) {
 
-        Graph2 cyclicGraph = new Graph2(A.length+B.length+1);
+        Graph2 cyclicGraph = new Graph2(A.length + B.length + 1);
 
         for (int i = 0; i < A.length; i++) {
             cyclicGraph.addEdge(A[i], B[i]);
         }
 
-        boolean[] visited = new boolean[A.length+B.length+1];
-        boolean[] recStack = new boolean[A.length+B.length+1];
+        boolean[] visited = new boolean[A.length + B.length + 1];
+        boolean[] recStack = new boolean[A.length + B.length + 1];
 
         // Call the recursive helper function to
         // detect cycle in different DFS trees
@@ -33,9 +33,10 @@ public class Solution {
     }
 }
 
- class Graph2{
+class Graph2 {
     private final int V;
     private final List<List<Integer>> adj;
+
     public Graph2(int V) {
         this.V = V;
         adj = new ArrayList<>(V);
@@ -44,32 +45,32 @@ public class Solution {
             adj.add(new LinkedList<>());
     }
 
-     public void addEdge(int source, int dest) {
-         adj.get(source).add(dest);
-     }
+    public void addEdge(int source, int dest) {
+        adj.get(source).add(dest);
+    }
 
-     public boolean isCyclicUtil(int i, boolean[] visited, boolean[] recStack) {
+    public boolean isCyclicUtil(int i, boolean[] visited, boolean[] recStack) {
 
-         if (recStack[i]) return false;
+        if (recStack[i]) return false;
 
-         if (visited[i]) return false;
+        if (visited[i]) return false;
 
-         visited[i] = true;
+        visited[i] = true;
 
-         List<Integer> children = adj.get(i);
+        List<Integer> children = adj.get(i);
 
-         for (Integer c : children){
-             recStack[c] = true;
-             if (isCyclicUtil(c, visited, recStack)) return true;
-         }
+        for (Integer c : children) {
+            recStack[c] = true;
+            if (isCyclicUtil(c, visited, recStack)) return true;
+        }
 
 
-         for (int i1 = 0; i1 < recStack.length; i1++) {
-             if (recStack[i] != true){
-                 return false;
-             }
-         }
+        for (int i1 = 0; i1 < recStack.length; i1++) {
+            if (recStack[i] != true) {
+                return false;
+            }
+        }
 
-         return true;
-     }
+        return true;
+    }
 }

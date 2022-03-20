@@ -18,6 +18,20 @@ class Graph {
             adj.add(new LinkedList<>());
     }
 
+    // Driver code
+    public static void main(String[] args) {
+        Graph graph = new Graph(4);
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
+        graph.addEdge(1, 2);
+        graph.addEdge(2, 0);
+        graph.addEdge(2, 3);
+        graph.addEdge(3, 3);
+
+        if (graph.isCyclic()) System.out.println("Graph contains cycle");
+        else System.out.println("Graph doesn't " + "contain cycle");
+    }
+
     private boolean isCyclicUtil(int i, boolean[] visited, boolean[] recStack) {
 
         // Mark the current node as visited and
@@ -61,20 +75,6 @@ class Graph {
             if (isCyclicUtil(i, visited, recStack)) return true;
 
         return false;
-    }
-
-    // Driver code
-    public static void main(String[] args) {
-        Graph graph = new Graph(4);
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 2);
-        graph.addEdge(1, 2);
-        graph.addEdge(2, 0);
-        graph.addEdge(2, 3);
-        graph.addEdge(3, 3);
-
-        if (graph.isCyclic()) System.out.println("Graph contains cycle");
-        else System.out.println("Graph doesn't " + "contain cycle");
     }
 }
 
