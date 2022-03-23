@@ -1,4 +1,4 @@
-package com.newton.code.generic;
+package com.newton.code.dp;
 
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
@@ -19,7 +19,6 @@ public class Fibonacci {
     private static int fibonacci(int i) {
         if (i <= 2) return 1;
         int recValue = fibonacci(i - 1) + fibonacci(i - 2);
-        //  System.out.println("\t" + recValue);
         return recValue;
     }
 
@@ -27,7 +26,6 @@ public class Fibonacci {
         if (mem.containsKey(i)) return mem.get(i);
         if (i <= 2) return 1;
         int recValue = fibonacciMem(i - 1) + fibonacciMem(i - 2);
-        //  System.out.println("\t" + recValue);
         mem.put(i, recValue);
         return recValue;
     }
