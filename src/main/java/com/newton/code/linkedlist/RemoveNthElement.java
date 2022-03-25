@@ -14,7 +14,7 @@ public class RemoveNthElement {
 
 
     while (remove != null) {
-      System.out.print("\t" + remove.data);
+      System.out.print("\t" + remove.val);
       remove = remove.next;
     }
 

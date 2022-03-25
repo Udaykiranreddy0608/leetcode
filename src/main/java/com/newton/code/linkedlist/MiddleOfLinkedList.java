@@ -20,7 +20,7 @@ class MiddleOfLinkedList {
 
         ListNode listNode1 = middleNode(listNode);
 
-        System.out.println(listNode1.data);
+        System.out.println(listNode1.val);
     }
 
     public static ListNode middleNode(ListNode head) {

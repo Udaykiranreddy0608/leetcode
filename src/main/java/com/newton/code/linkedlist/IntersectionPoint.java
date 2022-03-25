@@ -23,14 +23,14 @@ public class IntersectionPoint {
     printListNode(listNode2);
 
     final ListNode intersectionNode = getIntersectionNode(listNode, listNode2);
-    System.out.println("intersectionNode : " + intersectionNode.data);
+    System.out.println("intersectionNode : " + intersectionNode.val);
 
   }
 
   private static void printListNode(ListNode listNode) {
 
     while (listNode != null) {
-      System.out.printf("\t " + listNode.data);
+      System.out.printf("\t " + listNode.val);
       listNode = listNode.next;
     }
   }
