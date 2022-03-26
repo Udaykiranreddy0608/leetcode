@@ -3,12 +3,12 @@ package com.newton.code.dp;
 import java.util.HashMap;
 
 public class GridTraveller {
+    private static final HashMap<String, Integer> map = new HashMap<>();
+
     public static void main(String[] args) {
 
         System.out.println("Number of paths : " + uniquePaths(100, 100));
     }
-
-    private static HashMap<String, Integer> map = new HashMap<>();
 
     public static int uniquePaths(int m, int n) {
         String key = m + "_" + n;
