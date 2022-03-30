@@ -52,6 +52,7 @@ public class ReverseLinkedList {
     while (listNode != null) {
       System.out.print(listNode.val + " ");
       listNode = listNode.next;
+
     }
   }
 }

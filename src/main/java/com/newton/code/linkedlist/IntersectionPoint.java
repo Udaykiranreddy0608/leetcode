@@ -19,8 +19,9 @@ public class IntersectionPoint {
 //    listNode2.next.next.next.next.next = new ListNode(5);
 
     printListNode(listNode);
-    System.out.println("");
+    System.out.println();
     printListNode(listNode2);
+
 
     final ListNode intersectionNode = getIntersectionNode(listNode, listNode2);
     System.out.println("intersectionNode : " + intersectionNode.val);
@@ -34,7 +35,6 @@ public class IntersectionPoint {
       listNode = listNode.next;
     }
   }
-
 
   public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 
@@ -70,7 +70,6 @@ public class IntersectionPoint {
       current1 = current1.next;
       current2 = current2.next;
     }
-
     return null;
   }
 
@@ -84,5 +83,4 @@ public class IntersectionPoint {
 
     return cnt;
   }
-
 }

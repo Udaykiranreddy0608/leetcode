@@ -19,7 +19,7 @@ public class RemoveElement {
     for (int num : nums) {
       System.out.printf("\t" + num);
     }
-    System.out.println("");
+    System.out.println();
     System.out.println("K :" + k);
     return k;
   }

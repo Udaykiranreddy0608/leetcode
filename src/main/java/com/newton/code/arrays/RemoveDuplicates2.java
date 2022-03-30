@@ -22,7 +22,7 @@ public class RemoveDuplicates2 {
       System.out.printf("\t" + num);
     }
 
-    System.out.println("");
+    System.out.println();
 
     System.out.println("k :" + k);
     return 0;
