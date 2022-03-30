@@ -4,6 +4,9 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] nums = {1, 4, 5, 7, 8, 10, 11, 15};
+        for (int num : nums) {
+
+        }
         int target = 20;
         int index = search(nums, target);
         if (index == -1) {
