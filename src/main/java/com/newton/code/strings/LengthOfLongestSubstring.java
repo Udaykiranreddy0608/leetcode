@@ -36,7 +36,7 @@ public class LengthOfLongestSubstring {
         // 0 <= s.length <= 5 * 104
         // s consists of English letters, digits, symbols and spaces.
 
-        int length = lengthOfLongestSubstring("123451");
+        int length = lengthOfLongestSubstring("asdsfgh");
         System.out.println("Length of longest substring is :" + length);
     }
 

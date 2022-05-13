@@ -7,7 +7,7 @@ public class GridTraveller {
 
     public static void main(String[] args) {
 
-        System.out.println("Number of paths : " + uniquePaths(100, 100));
+        System.out.println("Number of paths : " + uniquePaths(3, 6));
     }
 
     public static int uniquePaths(int m, int n) {
