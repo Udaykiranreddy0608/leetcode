@@ -68,18 +68,18 @@ public class UsersResourceAccess {
                 MinMax curr = map.get(s[1]);
 
 
-                if (Integer.parseInt(s[0].toString()) > curr.getMax()) {
-                    curr.setMax(Integer.parseInt(s[0].toString()));
-                } else if (Integer.parseInt(s[0].toString()) < curr.getMin()) {
-                    curr.setMin(Integer.parseInt(s[0].toString()));
+                if (Integer.parseInt(s[0]) > curr.getMax()) {
+                    curr.setMax(Integer.parseInt(s[0]));
+                } else if (Integer.parseInt(s[0]) < curr.getMin()) {
+                    curr.setMin(Integer.parseInt(s[0]));
                 }
                 map.put(s[1], curr);
 
 
             } else {
                 MinMax minMax = new MinMax();
-                minMax.setMax(Integer.parseInt(s[0].toString()));
-                minMax.setMin(Integer.parseInt(s[0].toString()));
+                minMax.setMax(Integer.parseInt(s[0]));
+                minMax.setMin(Integer.parseInt(s[0]));
                 map.put(s[1], minMax);
             }
 

@@ -63,7 +63,7 @@ class Result {
 
         }
 
-        System.out.println("Arrys " + arrayList.toString());
+        System.out.println("Arrys " + arrayList);
         return arrayList;
 
     }
