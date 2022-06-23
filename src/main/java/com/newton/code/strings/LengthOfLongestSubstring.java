@@ -36,7 +36,7 @@ public class LengthOfLongestSubstring {
     // 0 <= s.length <= 5 * 104
     // s consists of English letters, digits, symbols and spaces.
 
-    int length = lengthOfLongestSubstring("123451");
+    int length = lengthOfLongestSubstring("asdsfgh");
     System.out.println("Length of longest substring is :" + length);
   }
 
@@ -47,7 +47,7 @@ public class LengthOfLongestSubstring {
     int i = 0;
 
     for (int j = 0; j < s.length(); j++) {
-      // Get the first char of string
+      // Get the first chat of string
       char c = s.charAt(j);
       while (seen.contains(c)) {
         seen.remove(s.charAt(i++));
