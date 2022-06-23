@@ -1,4 +1,4 @@
-package com.newton.code;
+package com.newton.code.interview;
 
 import java.util.HashMap;
 import java.util.Map;
