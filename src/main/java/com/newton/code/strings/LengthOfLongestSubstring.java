@@ -47,7 +47,7 @@ public class LengthOfLongestSubstring {
     int i = 0;
 
     for (int j = 0; j < s.length(); j++) {
-      // Get the first chat of string
+      // Get the first char of string
       char c = s.charAt(j);
       while (seen.contains(c)) {
         seen.remove(s.charAt(i++));
