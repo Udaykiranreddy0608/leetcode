@@ -1,4 +1,4 @@
-package com.newton.code.arceisum;
+package com.newton.code.interviews;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
