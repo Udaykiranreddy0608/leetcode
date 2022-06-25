@@ -1,3 +1,5 @@
+package com.newton.code.interview;
+
 /*
 You are planning out a trek across a snowy mountain. On the mountain it snows in the morning, the snow melts with the sun in the afternoon, and in the evening you can attempt a crossing.
 
@@ -64,109 +66,5 @@ D - number of days in the forecast
 
 */
 
-import java.io.*;
-import java.util.*;
-
-public class Solution {
-  public static void main(String[] argv) {
-  int[] obstacles_1 = {4, 6};
-  int[] obstacles_2 = {2, 9, 4};
-
-  String instructions_1 = "RRRJJRRR";
-  String instructions_2 = "RRRLJ";
-  String instructions_3 = "RRRJJRRRL";
-  String instructions_4 = "RRRLRJJRRR";
-  String instructions_5 = "RRRRRRRRRR";
-  String instructions_6 = "RRJJJJ";
-  String instructions_7 = "RLRRRJJRRLLJJJLRRRJJRRR";
-  String instructions_8 = "RRRJJRLJR";
-  String instructions_9 = "R";
-  String instructions_10 = "RJJRRRJ";
-
-    System.out.println(level(obstacles_1,instructions_1));
-    System.out.println(level(obstacles_1, instructions_2));
-    System.out.println(level(obstacles_1, instructions_3));
-
-    System.out.println(level(obstacles_1, instructions_4));
-    System.out.println(level(obstacles_1, instructions_5));
-    System.out.println(level(obstacles_1, instructions_6));
-    System.out.println(level(obstacles_1, instructions_7) );
-    System.out.println(level(obstacles_1, instructions_8));
-    System.out.println(level(obstacles_1, instructions_9));
-    System.out.println(level(obstacles_2, instructions_10));
-
-
-  }
-
-
-
-
-
-
-
-
-
-  /*
-  public static boolean level(int[] obstacles_1 ,String instructions_1) {
-
-
-    int cnt = 0 ;
-    List<Integer> list  = new ArrayList<Integer>();
-    for(int x = 0 ; x < obstacles_1.length - 1;x++){
-      list.add(obstacles_1[x]);
-    }
-
-    char prevState = instructions_1.charAt(0);
-
-    for(int i =0 ;i<instructions_1.length();i++){
-      char s = instructions_1.charAt(i);
-           // System.out.println("Pos : "+i+"\t Char "+s);
-
-      if(s == 'R' ){
-
-                          cnt++;
-                   //  System.out.println("Cnt at R "+cnt);
-      prevState = s;
-    if(list.contains(cnt)){
-      return false;
-    }else if (cnt == 10 ){
-      return true;
-    }
-
-      }else if (s == 'L'){
-       cnt--;
-                              // System.out.println("Cnt at L "+cnt);
-      prevState = s;
-
-          if(list.contains(cnt)){
-                  return false;
-
-          }
-      else  if (cnt == 10 ){
-      return true;
-    }
-      }else if (s == 'J'){
-        if(prevState == 'R'){
-          cnt= cnt +2;
-        }else if (prevState == 'L'){
-          cnt = cnt -2 ;
-        }                  //  System.out.println("Cnt at J "+cnt);
-
-           if(list.contains(cnt)){
-      return false;
-    }else if (cnt == 10 ){
-      return true;
-    }
-
-      }
-
-    }
-   // System.out.println("Final CNT : "+cnt);
-    if(cnt == 10 ){
-          return true;
-
-    }
-    return false;
-  }
+public class MountainTrek {
 }
-*/
