@@ -3,16 +3,16 @@ package com.newton.code.trees;
 public class BalancedTree {
     public static void main(String[] args) {
 
-        Node node = new Node(1);
-        node.left = new Node(2);
-        node.right = new Node(3);
-        node.right.left = new Node(4);
-        node.right.right = new Node(5);
-        System.out.printf("isBalanced : " + isBalanced(node));
+        TreeNode treeNode = new TreeNode(1);
+        treeNode.left = new TreeNode(2);
+        treeNode.right = new TreeNode(3);
+        treeNode.right.left = new TreeNode(4);
+        treeNode.right.right = new TreeNode(5);
+        System.out.printf("isBalanced : " + isBalanced(treeNode));
 
     }
 
-    public static boolean isBalanced(Node root) {
+    public static boolean isBalanced(TreeNode root) {
 
         if (root != null) {
             if (root.left != null && root.right == null) {

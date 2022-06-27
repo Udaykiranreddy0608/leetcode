@@ -3,20 +3,20 @@ package com.newton.code.trees;
 public class SameNode {
 
     public static void main(String[] args) {
-        Node node = new Node(1);
-        node.left = new Node(2);
-        node.right = new Node(4);
+        TreeNode treeNode = new TreeNode(1);
+        treeNode.left = new TreeNode(2);
+        treeNode.right = new TreeNode(4);
 
-        Node node2 = new Node(1);
-        node2.left = new Node(2);
-        node2.right = new Node(3);
+        TreeNode treeNode2 = new TreeNode(1);
+        treeNode2.left = new TreeNode(2);
+        treeNode2.right = new TreeNode(3);
 
-        boolean sameNode = isSameNode(node, node2);
+        boolean sameNode = isSameNode(treeNode, treeNode2);
         System.out.printf("is Same node : " + sameNode);
 
     }
 
-    private static boolean isSameNode(Node p, Node q) {
+    private static boolean isSameNode(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
         }

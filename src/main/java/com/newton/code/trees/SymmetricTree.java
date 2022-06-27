@@ -2,24 +2,24 @@ package com.newton.code.trees;
 
 public class SymmetricTree {
     public static void main(String[] args) {
-        Node node = new Node(1);
-        node.left = new Node(2);
-        node.right = new Node(2);
+        TreeNode treeNode = new TreeNode(1);
+        treeNode.left = new TreeNode(2);
+        treeNode.right = new TreeNode(2);
 
-        node.left.left = new Node(3);
-        node.left.right = new Node(4);
+        treeNode.left.left = new TreeNode(3);
+        treeNode.left.right = new TreeNode(4);
 
-        node.right.left = new Node(3);
-        node.right.right = new Node(4);
+        treeNode.right.left = new TreeNode(3);
+        treeNode.right.right = new TreeNode(4);
 
-        isSymmetric(node);
+        isSymmetric(treeNode);
     }
 
-    public static boolean isSymmetric(Node root) {
+    public static boolean isSymmetric(TreeNode root) {
         return compare(root.left, root.right);
     }
 
-    public static boolean compare(Node p, Node q) {
+    public static boolean compare(TreeNode p, TreeNode q) {
 
         if (p == null && q == null) {
             return true;

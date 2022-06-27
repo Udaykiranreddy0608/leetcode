@@ -8,69 +8,69 @@ public class TreeBasics {
  *     5         9
  *   1   2     6  8
  */
-        Node node = new Node(10);
-        node.left = new Node(5);
-        node.right = new Node(15);
-        node.right.left = new Node(11);
-        node.right.right = new Node(13);
-        node.left.right = new Node(8);
-        node.left.left = new Node(4);
+        TreeNode treeNode = new TreeNode(10);
+        treeNode.left = new TreeNode(5);
+        treeNode.right = new TreeNode(15);
+        treeNode.right.left = new TreeNode(11);
+        treeNode.right.right = new TreeNode(13);
+        treeNode.left.right = new TreeNode(8);
+        treeNode.left.left = new TreeNode(4);
       /*  node.left.left = new Node(1);
         node.left.right = new Node(2);
         node.right = new Node(9);
         node.right.left = new Node(6);
         node.right.right = new Node(8);*/
         System.out.println("In-Order");
-        printNodeInOrder(node);
+        printNodeInOrder(treeNode);
         System.out.println("\nPre-Order");
-        printNodePreOrder(node);
+        printNodePreOrder(treeNode);
         System.out.println("\nPost-Order");
-        printNodePostOrder(node);
+        printNodePostOrder(treeNode);
     }
 
     /**
      * in-order : left node right
      *
-     * @param node
+     * @param treeNode
      */
-    public static void printNodeInOrder(Node node) {
-        if (node.left != null) {
-            printNodeInOrder(node.left);
+    public static void printNodeInOrder(TreeNode treeNode) {
+        if (treeNode.left != null) {
+            printNodeInOrder(treeNode.left);
         }
-        System.out.printf("\t" + node.val);
-        if (node.right != null) {
-            printNodeInOrder(node.right);
+        System.out.printf("\t" + treeNode.val);
+        if (treeNode.right != null) {
+            printNodeInOrder(treeNode.right);
         }
     }
 
     /**
      * pre-order : Node left right
      *
-     * @param node
+     * @param treeNode
      */
-    public static void printNodePreOrder(Node node) {
-        System.out.printf("\t" + node.val);
-        if (node.left != null) {
-            printNodePreOrder(node.left);
+    public static void printNodePreOrder(TreeNode treeNode) {
+        System.out.printf("\t" + treeNode.val);
+        if (treeNode.left != null) {
+            printNodePreOrder(treeNode.left);
         }
-        if (node.right != null) {
-            printNodePreOrder(node.right);
+        if (treeNode.right != null) {
+            printNodePreOrder(treeNode.right);
         }
     }
 
     /**
      * post-order : left right node
      *
-     * @param node
+     * @param treeNode
      */
-    public static void printNodePostOrder(Node node) {
-        if (node.left != null) {
-            printNodePostOrder(node.left);
+    public static void printNodePostOrder(TreeNode treeNode) {
+        if (treeNode.left != null) {
+            printNodePostOrder(treeNode.left);
         }
-        if (node.right != null) {
-            printNodePostOrder(node.right);
+        if (treeNode.right != null) {
+            printNodePostOrder(treeNode.right);
         }
-        System.out.printf("\t" + node.val);
+        System.out.printf("\t" + treeNode.val);
     }
 
 

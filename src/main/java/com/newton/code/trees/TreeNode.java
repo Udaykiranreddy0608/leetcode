@@ -1,12 +1,12 @@
 package com.newton.code.trees;
 
-public class Node {
+public class TreeNode {
 
-    Node left;
-    Node right;
+    TreeNode left;
+    TreeNode right;
     int val;
 
-    public Node(int data) {
+    public TreeNode(int data) {
         this.val = data;
         this.left = null;
         this.right = null;
