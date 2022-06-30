@@ -56,7 +56,7 @@ public class JSONGenerator {
     else if (object instanceof String) {
       String value = (String) object;
 
-      result = surroundDoubleQuotes(String.valueOf(value));
+      result = surroundDoubleQuotes(value);
 
     }
 
@@ -99,11 +99,11 @@ public class JSONGenerator {
 
     String result = "\"[";
     StringJoiner joiner = new StringJoiner(",");
-    for (Object element : (Object[]) object) {
+    for (Object element : object) {
       joiner.add(convert(element));
     }
 
-    result += joiner.toString() + "]\"";
+    result += joiner + "]\"";
 
     return result;
 
@@ -119,7 +119,7 @@ public class JSONGenerator {
 
     }
 
-    result += joiner.toString() + "}\"";
+    result += joiner + "}\"";
 
     return result;
 
