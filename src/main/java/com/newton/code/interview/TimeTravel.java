@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class TimeTravel {
 
-    private static HashMap<String, TreeMap<Long, String>> map = new HashMap<>();
+    private static final HashMap<String, TreeMap<Long, String>> map = new HashMap<>();
 
     public static void main(String[] args) throws InterruptedException {
 
