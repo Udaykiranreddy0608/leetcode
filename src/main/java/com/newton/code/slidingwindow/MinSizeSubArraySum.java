@@ -25,6 +25,24 @@ package com.newton.code.slidingwindow;
 public class MinSizeSubArraySum {
 
     public static void main(String[] args) {
-        System.out.printf("Hello");
+
+        int target = 7;
+        int[] nums = {1, 5, 1, 3, 6, 1, 0,2};
+        System.out.println(minSubArrayLenUsingTwoPointer(target, nums));
+    }
+
+
+    public static int minSubArrayLenUsingTwoPointer(int target, int[] nums) {
+        int ans = Integer.MAX_VALUE;
+        int left = 0;
+        int currentSum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            currentSum += nums[i];
+            while (currentSum >= target) {
+                ans = Math.min(ans, i + 1 - left);
+                currentSum -= nums[left++];
+            }
+        }
+        return ans != Integer.MAX_VALUE ? ans : 0;
     }
 }
