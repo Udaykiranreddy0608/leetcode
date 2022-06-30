@@ -19,10 +19,7 @@ public class BalancedTree {
 
     public static boolean isBalanced(TreeNode root) {
         if (root == null) return true;
-        int lheight = height(root.left);
-        int rheight = height(root.right);
-        if (Math.abs(lheight - rheight) > 1) return false;
-        System.out.println("Max depth :" + root.val + "\t L height" + lheight + "\t R height" + rheight);
+        if (Math.abs(height(root.left) - height(root.right)) > 1) return false;
         return isBalanced(root.left) && isBalanced(root.right);
     }
 
