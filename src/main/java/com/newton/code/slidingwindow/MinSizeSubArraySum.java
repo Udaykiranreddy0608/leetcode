@@ -27,12 +27,27 @@ public class MinSizeSubArraySum {
     public static void main(String[] args) {
 
         int target = 7;
-        int[] nums = {1, 5, 1, 3, 6, 1, 0,2};
-        System.out.println(minSubArrayLenUsingTwoPointer(target, nums));
+        int[] nums = {1, 5, 1, 3, 6, 1, 0, 2};
+        System.out.println(minSubArrayLen(target, nums));
     }
 
 
-    public static int minSubArrayLenUsingTwoPointer(int target, int[] nums) {
+    /**
+     * Below problem is solved using two pointer approach.
+     * <p>
+     * - scan through the array 0 to nums length - 1
+     * - get the sum of numbers as you pass through
+     * - once sum is >= target get the index size and mark the least index that you achieve
+     * - check further if you can reduce the index from left and still achieve target number
+     * - while doing above increment the left and also subtract that number from actual sum
+     * - that's all you should be able to solve this.
+     * </p>
+     *
+     * @param target target num to searched for.
+     * @param nums   array of number as input.
+     * @return min array size obtained.
+     */
+    public static int minSubArrayLen(int target, int[] nums) {
         int ans = Integer.MAX_VALUE;
         int left = 0;
         int currentSum = 0;
