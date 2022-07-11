@@ -15,6 +15,27 @@ public class LRUCache {
     tail.prev = head;
   }
 
+  public static void main(String[] args) {
+
+
+    LRUCache lruCache = new LRUCache(5);
+    lruCache.put(1, 101);
+    lruCache.put(2, 201);
+    lruCache.print();
+    lruCache.put(3, 301);
+    lruCache.put(4, 401);
+    lruCache.put(5, 501);
+    lruCache.put(6, 601);
+    lruCache.print();
+    lruCache.get(6);
+    lruCache.get(5);
+    lruCache.print();
+    lruCache.get(1);
+    lruCache.put(3, 302);
+    lruCache.print();
+
+  }
+
   public int put(int key, int value) {
     Node node = new Node(key, value);
 
@@ -52,27 +73,6 @@ public class LRUCache {
     node.prev = head;
     node.next = headNext;
     headNext.prev = node;
-  }
-
-  public static void main(String[] args) {
-
-
-    LRUCache lruCache = new LRUCache(5);
-    lruCache.put(1, 101);
-    lruCache.put(2, 201);
-    lruCache.print();
-    lruCache.put(3, 301);
-    lruCache.put(4, 401);
-    lruCache.put(5, 501);
-    lruCache.put(6, 601);
-    lruCache.print();
-    lruCache.get(6);
-    lruCache.get(5);
-    lruCache.print();
-    lruCache.get(1);
-    lruCache.put(3, 302);
-    lruCache.print();
-
   }
 
   private void print() {
