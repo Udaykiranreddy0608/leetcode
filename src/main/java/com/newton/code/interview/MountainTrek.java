@@ -67,5 +67,5 @@ D - number of days in the forecast
 */
 
 public class MountainTrek {
-    // TODO write code
+  // TODO write code
 }
