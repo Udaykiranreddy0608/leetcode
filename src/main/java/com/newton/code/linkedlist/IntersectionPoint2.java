@@ -1,6 +1,6 @@
 package com.newton.code.linkedlist;
 
-public class FindInterSection {
+public class IntersectionPoint2 {
 
     public static void main(String[] args) {
 
