@@ -11,9 +11,9 @@ public class ReverseLl {
         ListNode current = listNode;
         while (current != null) {
             current.next = temp;
-            temp.next =
+            //  temp.next =
 
-
+            //TODO complete this
             current = current.next;
         }
 
