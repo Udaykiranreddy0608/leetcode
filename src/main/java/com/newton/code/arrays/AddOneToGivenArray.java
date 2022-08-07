@@ -24,9 +24,9 @@ public class AddOneToGivenArray {
         //
         ArrayList<Integer> integers = new ArrayList<>();
         integers.add(0);
-        //    integers.add(2);
-        //    integers.add(3);
-        //    integers.add(4);
+        integers.add(2);
+        integers.add(3);
+        integers.add(4);
 
         System.out.println(plusOne2(integers));
     }
